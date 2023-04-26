@@ -1,0 +1,454 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    position: relative;
+    color:white;
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: rgba(13,16,38,1);
+
+}
+
+
+
+p{
+    margin: 0;
+}
+h4{
+    margin: 0;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: #0D1026;
+    font-size: 25px;
+    z-index: 100;
+}
+
+nav i{
+    font-size: 40px;
+    margin: 5px;
+}
+
+.fav{
+    font-size: 21px;
+    margin:0 50px;
+}
+.search{
+    position: absolute;
+    right: 8%;
+    top: 20%;
+}
+.search i{
+    font-size: 20px;
+}
+
+
+
+.search-box{
+    display: inline-block;
+    height: 30px;
+    width: 250px;
+    background-color: #523075;
+    border-radius: 10px;
+
+}
+
+input{
+    font-size: 16px;
+    color:white;
+    width: 170px;
+    background-color: #523075;
+    border-style: none;
+}
+/*removing the input border outline*/
+input:focus{
+    outline: none;
+}
+
+.bell{
+    margin: 5px;
+}
+
+.rahul-img{
+    position:absolute;
+    display: inline-block;
+    background-image: url("rahul.jpg");
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-size: cover;
+    right: 2%;
+    top:20%;
+}
+
+
+@media screen and (max-width:700px) {
+    .fav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .spotify{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .search-box{
+        width: 180px;
+        /*border: 1px solid red;*/
+    }
+    input{
+        width:80px;
+        /*border: 1px solid red;*/
+        right: 15%;
+    }
+}
+main{
+    display: flex;
+}
+
+#left-part{
+    width: 70%;
+   height: auto;
+    /*border:1px solid pink;*/
+    margin: 50px;
+
+}
+#right-part{
+    width: 30%;
+    height: auto;
+    /*border:1px solid red;*/
+    margin:5px;
+    margin-top:50px;
+}
+
+#singer-details{
+    padding:10px;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    display: flex;
+    box-sizing: border-box;
+    /*box-shadow: 5px 10px #888888;*/
+    background-image: linear-gradient(to bottom,rgba(21,28,68,1),rgb(21,28,68,0.9));
+    /*background-color: hsl(231.06,52.81%,17.45%);*/
+}
+#singer-image img{
+    width: 30vh;
+    max-height: 30vh;
+    margin:10px;
+}
+#singer-image{
+    /*border: 1px solid pink;*/
+
+}
+#div1{
+    /*border:1px solid red;*/
+    position: relative;
+}
+
+#singer-introduction {
+    flex-grow: 1;
+    /*border:1px solid red;*/
+    /*min-width: 500px;*/
+    /*overflow-x: scroll;*/
+    display: flex;
+}
+.billie{
+    font-size: 25px;
+    font-family:Optima
+}
+.billie-introduction{
+    font-size: 15px;
+    font-family: candra;
+    margin:10px 0
+}
+/*@media screen and (max-width: 1100px) {*/
+/*    .billie{*/
+/*        font-size:14px;*/
+/*    }*/
+
+/*}*/
+#div1{
+    width: 95%;
+    margin:auto;
+
+    height: 80%;
+    /*border:1px solid purple;*/
+
+}
+
+#play-now{
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    background-image: linear-gradient(135deg, #5e11ad, #c806cb);
+    color:white;
+}
+
+button{
+    border-style: none;
+}
+.follow{
+    position: absolute;
+    bottom: 3%;
+    left: 45%;
+    margin-left:10px;
+}
+@media screen and (max-width: 700px) {
+    #play-now{
+        font-size:10px;
+        width: 100px;
+        height: 30px;
+        /*display: none;*/
+    }
+    .billie{
+        font-size:14px;
+    }
+    .billie-introduction{
+        font-size: 12px;
+    }
+    .follow{
+        font-size:14px;
+        display: none;
+    }
+}
+.queue{
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+
+
+
+.queue-list div{
+    background-image: linear-gradient(rgba(26,30,50,1), rgba(26,30,50,0.4));
+    position:relative;
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+.queue-list img{
+    width: 30px;
+    height: 30px;
+}
+
+.queue-list div img:hover{
+    border-radius: 25%;
+    animation-name: music-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.queue-list div h4{
+    font-family: "Andale Mono";
+    color: white;
+    margin-left: 20px;
+    display: inline-block;
+    position: absolute;
+    top:0%;
+
+}
+.queue-list div h5{
+    font-family: "Andale Mono";
+    color: white;
+    display: inline-block;
+    position: absolute;
+    margin-left: 20px;
+}
+.queue-list div span{
+    color:white;
+    position: relative;
+
+    margin-right: 5px;
+}
+
+
+.queue-list div h3{
+    display: inline-block;
+}
+.queue-list{
+    position: relative;
+}
+.queue-list div:hover{
+    background-color: #ce8989;
+}
+.heart{
+    position: absolute;
+    right: 10%;
+    top:15%;
+    font-size: 20px;
+}
+.plus{
+    position: absolute;
+    right: 5%;
+    top:15%;
+    font-size: 20px;
+}
+.queue-list div i:hover{
+    color:red;
+}
+
+/*similar artist*/
+#similar-playlist{
+
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+}
+.similar-playlist-image{
+
+    width: 30%;
+    height: 100%;
+    /*border:1px solid pink;*/
+
+}
+.similar-playlist-div{
+    width: 100%;
+    margin: 20px 0;
+    flex-shrink: 1;
+    /*border:1px solid red;*/
+    display: flex;
+}
+.similar-playlist-image img{
+    height: 100%;
+    width: 100%;
+}
+.similar-playlist-name{
+
+    width: 70%;
+    /*border:1px solid pink;*/
+}
+
+#recently-played{
+    height: auto;
+    width: 100%;
+    /*border: 1px solid red;*/
+}
+.queue-list{
+    overflow: scroll;
+}
+body{
+    overflow: hidden;
+}
+#right-part{
+    overflow: scroll;
+}
+
+@media screen and (max-width: 900px){
+    .music-play-time{
+        display: none;
+    }
+}
+.heart{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    .similar-playlist-name p{
+        font-size: 12px;
+    }
+}
+/**/
+.similar-playlist-name-name{
+    position: relative;
+    top:25%;
+    left: 10%;
+}
+
+.similar-playlist-name-singer-name{
+    position: relative;
+    top: 25%;
+    left: 10%;
+}
+
+#recently-played h4{
+    font-size: 14px;
+}
+#recently-played h5{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1100px){
+    #recently-played .heart{
+        display: none;
+    }
+    #recently-played h4{
+        font-size: 12px;
+    }
+    #recently-played h5{
+        font-size: 10px;
+    }
+    #recently-played .queue-list div h5{
+        margin-left: 4px;
+    }
+    #recently-played .queue-list div h4{
+        margin-left: 4px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #singer-introduction{
+        display: none;
+    }
+    #singer-image{
+        margin:auto;
+    }
+}
+
+
+@media screen and (max-height: 600px){
+    .billie-introduction{
+        display: none;
+    }
+    .billie-introduction{
+        overflow: scroll;
+    }
+}
+
+#hamburger{
+    position: absolute;
+    display: none;
+    /*border: 1px solid red;*/
+    top:10%;
+    right: 2%;
+}
+/*#hamburger-details{*/
+/*    position: absolute;*/
+/*    height: 94vh;*/
+/*    width: 30%;*/
+/*    border: 1px solid red;*/
+/*    right: 0;*/
+/*    margin-top:6vh;*/
+/*    !*background-color: wheat;*!*/
+/*}*/
+@media screen and (max-width: 920px){
+    #right-part{
+        display: none;
+    }
+
+    #hamburger{
+        display: block;
+    }
+    #left-part{
+        width: 100%;
+    }
+}
+#hamburger:target{
+
+}
+
